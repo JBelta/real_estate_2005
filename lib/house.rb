@@ -38,5 +38,13 @@ class House
   def rooms_sorted_by_area
     @rooms.sort { |room| room.area}
   end
-  
+
+  def rooms_by_category
+    #room_hash = Hash.new(0)
+    room_hash = @rooms.collect do |room|
+      if room.category == room.category
+        room_hash[room.category] = room
+      end
+    end
+  end 
 end
