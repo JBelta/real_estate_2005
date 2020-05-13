@@ -61,6 +61,6 @@ class HouseTest < Minitest::Test
 
     assert_equal 210.53, house.price_per_square_foot
     assert_equal [room_4, room_3, room_2, room_1], house.rooms_sorted_by_area
-    assert_equal ({:bedroom => [room_1, room_2], :living_room => room_3, :basement => room_4})
+    assert_equal ({:bedroom => [room_1, room_2], :living_room => room_3, :basement => room_4}), house.rooms_by_category
   end
 end
