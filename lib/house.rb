@@ -21,4 +21,8 @@ class House
       category == room.category
     end
   end
+
+  def details
+    {"price" => @price, "address" => @address}
+  end
 end
