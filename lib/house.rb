@@ -34,4 +34,9 @@ class House
     total = @price.to_f / total_sqft.to_f
     total.round(2)
   end
+
+  def rooms_sorted_by_area
+    @rooms.sort { |room| room.area}
+  end
+  
 end
