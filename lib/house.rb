@@ -4,7 +4,7 @@ class House
   attr_reader :price, :address, :rooms
 
   def initialize(price, address)
-    @price = price
+    @price = price.delete("$").to_i
     @address = address
     @rooms = []
   end
