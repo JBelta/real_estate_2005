@@ -25,4 +25,13 @@ class House
   def details
     {"price" => @price, "address" => @address}
   end
+
+  def price_per_square_foot
+    total_sqft = @rooms.sum do |room|
+      sum = 0
+      sum += (room.length * room.width.to_i)
+    end
+    total = @price.to_f / total_sqft.to_f
+    total.round(2)
+  end
 end
